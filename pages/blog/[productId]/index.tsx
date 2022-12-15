@@ -1,11 +1,17 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-
+import Link from 'next/link'
 const Subpage = () => {
   const router = useRouter()
-  const prodId = router.query.prodId
+  const prodId = router.query.productId
   return (
-    <div>This is Product {prodId}</div>
+    
+    <div>
+      <Link href='/'>
+          Go Home
+      </Link>
+      <p>This is Product {prodId}</p>
+    </div>
   )
 }
 
